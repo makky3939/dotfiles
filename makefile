@@ -11,7 +11,7 @@ clean:
 
 init:
 	@echo init
-	@exec zsh ~/.zshrc
+	. ~/.zshrc
 
 help:
 	@echo help
