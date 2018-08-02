@@ -5,8 +5,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/sbin:$PATH
 export PATH=$PATH:/usr/sbin/
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -34,3 +33,4 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
