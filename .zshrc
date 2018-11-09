@@ -34,3 +34,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/makky/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/makky/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/makky/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/makky/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
