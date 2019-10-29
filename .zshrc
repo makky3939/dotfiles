@@ -40,3 +40,4 @@ if [ -f '/Users/makky/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/makky/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/makky/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
