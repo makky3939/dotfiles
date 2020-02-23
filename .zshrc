@@ -5,8 +5,12 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/sbin:$PATH
 export PATH=$PATH:/usr/sbin/
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# for nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# for rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -25,19 +29,18 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 PROMPT="%~ %# "
 
-alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -la'
-
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
+# export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/makky/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/makky/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/Users/makky/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/makky/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/makky/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/makky/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+# if [ -f '/Users/makky/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/makky/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
+
+alias g='cd $(ghq list -p | fzf)'

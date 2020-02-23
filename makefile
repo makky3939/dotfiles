@@ -4,8 +4,7 @@ all:
 
 deploy:
 	@echo --- deploy ---
-	@exec ln -sfnv ./Projects/dotfiles/.zshrc ~/.zshrc
-	@exec ln -sfnv ./Projects/dotfiles/.tmux.conf ~/.tmux.conf
+	@exec ln -sfnv /Users/makky/ghq/github.com/makky3939/dotfiles/.zshrc ~/.zshrc
 
 clean:
 	@exec rm -vrf ~/.zshrc
