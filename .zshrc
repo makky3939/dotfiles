@@ -14,23 +14,28 @@ export NVM_DIR="$HOME/.nvm"
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# for pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# enable colors
 autoload -Uz colors
 colors
 
-#補完機能を使用する
+# enable autocompletion
 autoload -U compinit promptinit
 compinit
 zstyle ':completion::complete:*' use-cache true
-#zstyle ':completion:*:default' menu select true
 zstyle ':completion:*:default' menu select=1
-
 #大文字、小文字を区別せず補完する
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+# prompt layout
 PROMPT="%~ %# "
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
+# command to jump to selected git dir
 alias g='cd $(ghq list -p | fzf)'
