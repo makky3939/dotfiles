@@ -1,0 +1,15 @@
+[hub]
+	protocol = ssh
+[user]
+	name = Masaki Kobayashi
+	email = makky.4d6b.3f5@gmail.com
+[core]
+	excludesfile = /Users/makky/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/makky/.stCommitMsg
