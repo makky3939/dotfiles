@@ -8,7 +8,7 @@ deploy:
 
 clean:
 	@exec rm -vrf ~/.zshrc
-	@exec rm -vrf ~/.tmux.conf
+	# @exec rm -vrf ~/.tmux.conf
 
 init:
 	@echo --- init ---
