@@ -22,6 +22,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+# for texlive
+export PATH=$PATH:/usr/local/texlive/2019/bin/x86_64-darwin/
+
 # enable colors
 autoload -Uz colors
 colors
