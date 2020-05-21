@@ -41,4 +41,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 PROMPT="%~ %# "
 
 # command to jump to selected git dir
-alias g='cd $(ghq list -p | fzf)'
+alias g='cd $(ghq list -p | peco)'
+alias b='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias v='code $(ghq list -p | peco)'
